@@ -10,10 +10,11 @@
 
 int main(void)
 {
-	char i = 97;
+	char ch = 'a';
 
-	while (i <= 122)
-		putchar(i);
-		i++;
+	while (ch <= 'z')
+		putchar(ch);
+		ch++;
+	putchar('\n');
 	return (0);
 }
