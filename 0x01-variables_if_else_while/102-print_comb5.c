@@ -26,7 +26,7 @@ int main(void)
 				putchar((dig2 / 10) + 48);
 				putchar((dig2 % 10) + 48);
 
-				if (dig1 + dig2 != 35)
+				if (dig1 != 98 || dig2 != 99)
 				{
 					putchar(',');
 					putchar(' ');
