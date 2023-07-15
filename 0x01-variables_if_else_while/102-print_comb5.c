@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int dig1 = 0, int dig2;
+	int dig1 = 0, dig2;
 
 	while (dig1 <= 99)
 	{
