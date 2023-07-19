@@ -14,7 +14,7 @@ int main(void)
 	unsigned long fib_o = 0, fib_c = 1, fib_n;
 	int i = 0;
 
-	while (i < 50)
+	while (i < 49)
 	{
 		fib_n = fib_o + fib_c;
 		printf("%ld, ", fib_n);
