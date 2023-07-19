@@ -11,7 +11,8 @@
 
 int main(void)
 {
-	int fib_o = 0, fib_c = 1, fib_n, i = 0;
+	unsigned long fib_o = 0, fib_c = 1, fib_n;
+	int i = 0;
 
 	while (i < 50)
 	{
