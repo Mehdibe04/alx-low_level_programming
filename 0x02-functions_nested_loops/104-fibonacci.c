@@ -20,7 +20,7 @@ int numLength(int n)
 		length += 1;
 	}
 
-	Return (length);
+	return (length);
 }
 
 /**
