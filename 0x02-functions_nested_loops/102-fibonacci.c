@@ -22,6 +22,6 @@ int main(void)
 		fib_c = fib_n;
 		i++;
 	}
-	printf("%ld\n", fib_c + fib_n);
+	printf("%ld\n", fib_o + fib_c);
 	return (0);
 }
