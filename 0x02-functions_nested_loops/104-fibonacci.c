@@ -40,11 +40,11 @@ int main(void)
 	for (i = 1; i <= 98; i++)
 	{
 		if (f12 > 0)
-			printf("%lu", fl2);
+			printf("%lu", f12);
 		init0 = numLength(max) - 1 - numLength(f1);
 		while (f12 > 0 && init0 > 0)
 		{
-			printf("%lu", 0);
+			printf("%d", 0);
 			init0--;
 		}
 		printf("%lu", f1);
