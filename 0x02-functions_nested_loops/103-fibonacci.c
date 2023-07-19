@@ -11,7 +11,8 @@
 
 int main(void)
 {
-	unsigned long fibO = 0, fibC = 1, fibN, sum = 0;
+	unsigned long fibO = 0, fibC = 1, fibN;
+	float sum = 0;
 
 	while (fibN < 4000000)
 	{
@@ -21,6 +22,6 @@ int main(void)
 		fibO = fibC;
 		fibC = fibN;
 	}
-	printf("%ld\n", sum);
+	printf("%.0f\n", sum);
 	return (0);
 }
