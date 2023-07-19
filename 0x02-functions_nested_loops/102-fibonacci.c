@@ -17,11 +17,11 @@ int main(void)
 	while (i < 50)
 	{
 		fib_n = fib_o + fib_c;
-		printf("%d, ", fib_n);
+		printf("%ld, ", fib_n);
 		fib_o = fib_c;
 		fib_c = fib_n;
 		i++;
 	}
-	printf("%d\n", fib_c + fib_n);
+	printf("%ld\n", fib_c + fib_n);
 	return (0);
 }
