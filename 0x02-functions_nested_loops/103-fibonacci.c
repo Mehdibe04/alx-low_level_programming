@@ -15,11 +15,13 @@ int main(void)
 	int i;
 
 	while (fibN < 4000000)
+	{
 		fibN = fibO + fibC;
 		if (fibN % 2 == 0)
 			sum += fibN;
 		fibO = fibC;
 		fibC = fibN;
+	}
 	print("%ld\n", sum);
 	return (0);
 }
