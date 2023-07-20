@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
  * size_num - returns thenumber of digits of a number
@@ -35,7 +36,7 @@ int size_num(int n)
 
 void print_number(int n)
 {
-	int i, m;
+	int i, m = 0;
 	int s = size_num(n);
 	int size_c = s;
 
