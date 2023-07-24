@@ -1,15 +1,20 @@
 #include "main.h"
 
-/***/
+/**
+ * puts_half - prints half of a string
+ *
+ * @str: string of characters input
+ *
+ * Return: Nothing
+*/
 
 void puts_half(char *str)
 {
 	int i, count = 0;
 
-	while (*str)
+	while (str[count])
 	{
 		count++;
-		str++;
 	}
 
 	if (count % 2 == 0)
