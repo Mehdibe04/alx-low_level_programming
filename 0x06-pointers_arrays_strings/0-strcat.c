@@ -14,7 +14,7 @@ char *_strcat(char *dest, char *src)
 {
 	int i = 0, n = 0;
 
-	while (dest[i])
+	while (dest[n])
 		n++;
 
 	while (1)
@@ -23,6 +23,7 @@ char *_strcat(char *dest, char *src)
 			dest[i] = src[i - n];
 		if (src[i - n] == '\0')
 			break;
+		i++;
 	}
 
 	return (dest);
