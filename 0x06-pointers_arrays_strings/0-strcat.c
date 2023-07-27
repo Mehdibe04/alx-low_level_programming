@@ -12,14 +12,16 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int n = strlen(dest);
+	int i = 0, n = 0;
+
+	while (dest[i])
+		n++;
 
 	while (1)
 	{
 		if (dest[i] == '\0')
 			dest[i] = src[i - n];
-		if (*src == '\0')
+		if (src[i - n] == '\0')
 			break;
 	}
 
