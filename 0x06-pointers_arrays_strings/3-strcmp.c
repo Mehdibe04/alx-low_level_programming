@@ -13,14 +13,12 @@ int _strcmp(char *s1, char *s2)
 {
 	int n = 0, i = 0;
 
-	while (1)
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		if (s1[i] == s2[i])
 		{
-			if (s1[i] != '\0')
-				continue;
-			else
-				break;
+			i++;
+			continue;
 		}
 
 		else
@@ -28,7 +26,10 @@ int _strcmp(char *s1, char *s2)
 			n = s1[i] - s2[i];
 			break;
 		}
-		i++;
 	}
+
+	if ((s1[i] != '\0' && s2[i] == '\0') || (s1[i] == '\0' && s2[i] != '\0'))
+		n = s1[i] - s2[i];
+
 	return (n);
 }
