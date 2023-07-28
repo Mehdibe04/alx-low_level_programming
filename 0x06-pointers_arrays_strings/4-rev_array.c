@@ -2,13 +2,16 @@
 
 /**
  * reverse_array - reverses an array of integers
+ *
  * @a: string input
  * @n: the size of the string
- **/
+ *
+ * Return: Nothing
+*/
 
 void reverse_array(int *a, int n)
 {
-	int i, j
+	int i, j;
 	int s;
 
 	i = 0;
