@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * cap_string - Captilizes the string given as parameter
- * @s: the string
- * Return: the captilized string
+ * cap_string - lowercase to uppercase
+ *
+ * @s: string input
+ *
+ * Return: captilized string
  **/
 
 char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
 	if (s[i] >= 'a' && s[i] <= 'z')
-	{
 		s[i] -= 32;
-	}
 	while (s[i])
 	{
 		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','

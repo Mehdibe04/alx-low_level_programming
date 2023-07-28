@@ -2,19 +2,17 @@
 
 /**
  * rot13 - rotate by 13 places 'Caesar Cipher'
- * @s: the string to convert
- * Return: the converted string
- **/
+ *
+ * @s: string input to be converted
+ *
+ * Return: converted string
+*/
 
 char *rot13(char *s)
 {
-	int i;
-	int j;
-
+	int i = 0, j;
 	char *array1 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *array2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-	i = 0;
 
 	while (s[i])
 	{

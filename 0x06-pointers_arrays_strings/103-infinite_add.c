@@ -3,43 +3,44 @@
 
 /**
  * rev_array - reverse array
- * @n: integer params
- * Return: 0
+ *
+ * @n: input integer
+ *
+ * Return: Nothing
  */
 
 void rev_array(char *n)
 {
-	int i = 0;
-	int j = 0;
-	char temp;
+	int i = 0, j = 0;
+	char tmp;
 
 	while (*(n + i) != '\0')
-	{
 		i++;
-	}
 	i--;
 
 	for (j = 0; j < i; j++, i--)
 	{
-		temp = *(n + j);
+		tmp = *(n + j);
 		*(n + j) = *(n + i);
-		*(n + i) = temp;
+		*(n + i) = tmp;
 	}
 }
 
 /**
- * infinite_add - add 2 numbers together
- * @n1: text representation of 1st number to add
- * @n2: text representation of 2nd number to add
+ * infinite_add - add 2 numbers
+ *
+ * @n1: string representation of first number
+ * @n2: string representation of second number
  * @r: pointer to buffer
  * @size_r: buffer size
- * Return: pointer to calling function
+ *
+ * Return: pointer to the result
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int carry = 0, i = 0, j = 0, digits = 0;
-	int val1 = 0, val2 = 0, total = 0;
+	int c = 0, i = 0, j = 0, dig = 0;
+	int v1 = 0, v2 = 0, t = 0;
 
 	while (*(n1 + i) != '\0')
 		i++;
@@ -49,31 +50,31 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	j--;
 	if (j >= size_r || i >= size_r)
 		return (0);
-	while (j >= 0 || i >= 0 || carry == 1)
+	while (j >= 0 || i >= 0 || c == 1)
 	{
 		if (i < 0)
-			val1 = 0;
+			v1 = 0;
 		else
-			val1 = *(n1 + i) - '0';
+			v1 = *(n1 + i) - '0';
 		if (j < 0)
-			val2 = 0;
+			v2 = 0;
 		else
-			val2 = *(n2 + j) - '0';
-		total = val1 + val2 + carry;
-		if (total >= 10)
-			carry = 1;
+			v2 = *(n2 + j) - '0';
+		total = v1 + v2 + c;
+		if (t >= 10)
+			c = 1;
 		else
-			carry = 0;
-		if (digits >= (size_r - 1))
+			c = 0;
+		if (dig >= (size_r - 1))
 			return (0);
-		r[digits] = (total % 10) + '0';
-		digits++;
+		r[dig] = (t % 10) + '0';
+		dig++;
 		j--;
 		i--;
 	}
-	if (digits == size_r)
+	if (dig == size_r)
 		return (0);
-	r[digits] = '\0';
+	r[dig] = '\0';
 	rev_array(r);
 	return (r);
 }
