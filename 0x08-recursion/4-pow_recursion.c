@@ -1,6 +1,13 @@
 #include "main.h"
 
-/***/
+/**
+ * _pow_recursion - returns x raised to the power of y
+ *
+ * @x: number to be raised
+ * @y: power input
+ *
+ * Return: the result of the power function
+*/
 
 int _pow_recursion(int x, int y)
 {
@@ -10,5 +17,4 @@ int _pow_recursion(int x, int y)
 		return (1);
 	else
 		return (x * _pow_recursion(x, y - 1));
-
 }
