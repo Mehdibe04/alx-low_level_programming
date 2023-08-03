@@ -4,6 +4,7 @@
  * _sqrt_recursion - finds natural square root
  *
  * @n: number to be checked
+ * @i: square root
  *
  * Return: square root of n
 */
