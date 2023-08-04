@@ -11,9 +11,7 @@
 
 int main(int argc, char const **argv)
 {
-	int i = 0;
-
-	while (i < argc)
+	while (**argv != '\0')
 	{
 		printf("%s\n", **argv);
 		argv++;
