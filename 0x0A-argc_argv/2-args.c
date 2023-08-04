@@ -11,10 +11,10 @@
 
 int main(int argc, char const **argv)
 {
-	while (**argv != '\0')
-	{
+	int i;
+
+	for (i = 0; i < argc; i++)
 		printf("%s\n", **argv);
-		argv++;
-	}
+
 	return (0);
 }
