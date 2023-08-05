@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -6,7 +7,7 @@
  * @argc: number of arguments
  * @argv: list of arguments
  *
- * Return: 0 (Success)
+ * Return: 0 (Success), non-zero (Fail)
 */
 
 int main(int argc, char *argv[])
