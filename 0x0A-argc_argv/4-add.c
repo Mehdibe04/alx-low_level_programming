@@ -7,26 +7,26 @@
  * @argc: number of arguments
  * @argv: list of arguments
  *
- * Return: 0 (Success), 1 (Fail)
+ * Return: 0 (Success)
 */
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int res = 0;
 	char *c;
 
 	while (--argc)
 	{
-		for (c = argv[arg]; *c; c++)
+		for (c = argv[argc]; *c; c++)
 		{
-			if (*c > 57 || *c < 48)
+			if (*c > '9' || *c < '0')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		sum += atoi(argv[argc]);
+		res += atoi(argv[argc]);
 	}
-	printf("%d\n", sum);
+	printf("%d\n", res);
 	return (0);
 }
