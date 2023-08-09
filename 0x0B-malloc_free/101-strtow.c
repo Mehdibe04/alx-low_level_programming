@@ -80,16 +80,16 @@ int count_words(char *str)
 	{
 		if (str[i] != ' ')
 		{
-			count++;
+			c++;
 			while (str[i] != ' ' && str[i] != '\0')
 				i++;
 		}
 		else
 			i++;
 	}
-	if (count == 0 && _strlen(str) == 1 && str[0] == ' ')
-		count = 0;
-	return (count);
+	if (c == 0 && _strlen(str) == 1 && str[0] == ' ')
+		c = 0;
+	return (c);
 }
 
 /**
