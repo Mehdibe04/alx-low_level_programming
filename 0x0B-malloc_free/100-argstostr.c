@@ -65,7 +65,7 @@ char *argstostr(int ac, char **av)
 	str = malloc(sizeof(char) * l + 1);
 	if (!str)
 		return (NULL);
-	while (i < ac)
+	while (j < ac)
 	{
 		ind = 0;
 		while (av[j][ind])
