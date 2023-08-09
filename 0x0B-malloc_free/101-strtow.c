@@ -110,7 +110,7 @@ char **strtow(char *str)
 		return (NULL);
 	n = count_words(str);
 	wo = malloc(sizeof(char *) * (n + 1));
-	if (words == NULL)
+	if (wo == NULL)
 		return (NULL);
 	while (str[i] != '\0' && j < n)
 	{
@@ -126,7 +126,7 @@ char **strtow(char *str)
 				return (NULL);
 			_strncpy(w, str + st, wlen);
 			w[wlen] = '\0';
-			wo[j] = word;
+			wo[j] = w;
 			j++;
 		}
 		else
