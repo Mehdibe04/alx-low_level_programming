@@ -1,42 +1,77 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * *string_nconcat -  concatenates two strings
+ * __strlen - returns the length of a given string
  *
- * @s1: first string
- * @s2: second string
- * @n: int input
+ * @s: string input
  *
- * Return: pointer to the concatenated array
+ * Return: the length of given string
+*/
+
+int __strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+		i++;
+
+	return (i);
+}
+
+/**
+ * _strcpy - copies a string from src to dest
+ *
+ * @dest: the string to copy to
+ * @src: the string to copy from
+ * @n: the index to start from
+ *
+ * Return: dest the string the has src content
+*/
+
+void _strcpy(char *dest, char *src, unsigned int n)
+{
+	int i = 0;
+
+	while (src[i])
+	{
+		dest[n] = src[i];
+		n++;
+		i++;
+	}
+}
+
+/**
+ * string_nconcat - concatenates two strings
+ *
+ * @s1: the first string
+ * @s2: the second string
+ * @n: number of bytes to get from s2
+ *
+ * Return: the string containing s1 concatenated with s2.
 */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-	unsigned int i, j, lenS1, lenS2;
+	int l;
+	unsigned int i = 0;
 
-	if (s1 == NULL)
+	if (!s1)
 		s1 = "";
-	if (s2 == NULL)
+	if (!s2)
 		s2 = "";
-
-	for (lenS1 = 0; s1[lenS1] != '\0'; lenS1++)
-		;
-	for (lenS2 = 0; s2[lenS2] != '\0'; lenS2++)
-		;
-
-	s = malloc(lenS1 + n + 1);
-	if (s == NULL)
+	l = __strlen(s1);
+	s = malloc(l + n + 1);
+	if (!s)
 		return (NULL);
-
-	for (i = 0; s1[i] != '\0'; i++)
-		s[i] = s1[i];
-	for (j = 0; j < n; j++)
+	_strcpy(string, s1, 0);
+	while (i < n)
 	{
-		s[i] = s2[j];
+		s[l] = s2[i];
+		l++;
 		i++;
 	}
-	s[i] = '\0';
+	s[l] = '\0';
 	return (s);
 }
