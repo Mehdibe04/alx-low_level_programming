@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * _isdigit - checks if character is digit
@@ -82,7 +83,6 @@ char *_mult(char *s1, char *s2)
 	}
 	return (s);
 }
-
 
 /**
  * main - multiply two big number strings
