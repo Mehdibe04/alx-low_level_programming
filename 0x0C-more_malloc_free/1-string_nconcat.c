@@ -65,7 +65,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s = malloc(l + n + 1);
 	if (!s)
 		return (NULL);
-	_strcpy(string, s1, 0);
+	_strcpy(s, s1, 0);
 	while (i < n)
 	{
 		s[l] = s2[i];
