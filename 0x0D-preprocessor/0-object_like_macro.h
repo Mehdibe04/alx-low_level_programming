@@ -1,0 +1,5 @@
+#ifndef ZERO_OBJECT_LIKE_MACRO_H
+#define ZERO_OBJECT_LIKE_MACRO_H 1024
+
+#endif
+
