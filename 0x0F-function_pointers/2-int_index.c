@@ -13,15 +13,15 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i = 0;
+	int *e = array + size - 1;
 
-	if (array && cmp size < 0)
+	if (array && cmp && size < 0)
 	{
-		while (i < size)
+		while (array <= e)
 		{
-			if (cmp(array[i]))
-				return (i);
-			i++;
+			if (cmp(*array))
+				return (array + size - 1 - e);
+			array+;
 		}
 	}
 	return (-1);
