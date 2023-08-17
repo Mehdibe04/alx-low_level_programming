@@ -5,6 +5,7 @@
  *
  * @separator: string between ints
  * @n: number of arguments
+ * @...: the ints to print
  *
  * Return: Nothing
 */
@@ -14,7 +15,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list args;
 	int i = n;
 
-	if (n == NULL)
+	if (!n)
 	{
 		printf("\n");
 		return;
