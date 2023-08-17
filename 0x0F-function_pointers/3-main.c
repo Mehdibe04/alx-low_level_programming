@@ -11,7 +11,8 @@
 
 int main(int argc, char *argv)
 {
-	int (*op_f)(int, int), a, b;
+	int (*op_f)(int, int);
+	int a, b;
 
 	if (argc != 4)
 	{
@@ -20,7 +21,7 @@ int main(int argc, char *argv)
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	op_f = get_op_func(arg[2]);
+	op_f = get_op_func(argv[2]);
 	if (!op_f)
 	{
 		printf("Error\n");
