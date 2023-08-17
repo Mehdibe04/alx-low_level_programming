@@ -16,14 +16,14 @@
 	char *s;
 	va_list args;
 
-	if (n == NULL)
+	if (n == 0)
 	{
 		printf("\n");
 		return;
 	}
 	va_start(args, n);
 	while (i--)
-		printf("%s%s", (s = va_arg(args, char *)) ? str : "(nil)",
+		printf("%s%s", (s = va_arg(args, char *)) ? s : "(nil)",
 				i ? (separator ? separator : "") : "\n");
 	va_end(args);
 }
