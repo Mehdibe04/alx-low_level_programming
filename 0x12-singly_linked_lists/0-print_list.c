@@ -3,7 +3,7 @@
 /**
  * print_list - prints all the elements of a list_t list
  *
- * @h: singly linked list
+ * @h: pointer to the first node
  *
  * Return: the number of nodes
 */
@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		if (h->str == NULL)
 			printf("[0] (nil)");
 		else
-			printf("[%u] %s", strlen(h->len), h->str);
+			printf("[%d] %s", h->len, h->str);
 		l++;
 		h = h->next;
 	}
