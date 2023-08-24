@@ -3,7 +3,8 @@
 /**
  * free_list - frees a list_t list
  *
- * @head: pointer to the head of 
+ * @head: pointer to the head node
+ *
  * Return: Nothing
 */
 
@@ -11,10 +12,10 @@ void free_list(list_t *head)
 {
 	list_t *curr, *next_curr;
 
-	if (head == NULL)
+	if (!head)
 		return;
 	curr = head;
-	while (curr != NULL)
+	while (curr)
 	{
 		next_curr = curr->next;
 		free(curr->str);
