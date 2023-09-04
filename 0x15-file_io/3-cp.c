@@ -21,8 +21,7 @@ char *create_buffer(char *file)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
@@ -77,7 +76,7 @@ int main(int argc, char *argv[])
 
 	buff = create_buffer(argv[2]);
 	f = open(argv[1], O_RDONLY);
-	r = read(from, buff, 1024);
+	r = read(f, buff, 1024);
 	t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
