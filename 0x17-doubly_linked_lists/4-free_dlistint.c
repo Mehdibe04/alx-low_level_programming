@@ -1,19 +1,18 @@
 #include "lists.h"
 
 /**
- * free_dlistint - freeing a list
- *
+ * free_dlistint - Frees a lnkd list
  * @head: head
 */
 
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *st = head, *nxt;
+	dlistint_t *t;
 
-	while (st)
+	while (head)
 	{
-		nxt = st->nxt;
-		free(st);
-		st = nxt;
+		t = head->next;
+		free(head);
+		head = t;
 	}
 }
