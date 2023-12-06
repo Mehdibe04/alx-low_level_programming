@@ -10,17 +10,18 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *hsh_tbl =  malloc(sizeof(hash_table_t));
+	hash_table_t *hash_t;
 
-	if (!hsh_tbl)
+	hash_t = malloc(sizeof(hash_table_t));
+	if (!hash_t)
 		return (NULL);
-	hsh_tbl->size = size;
-	hsh_tbl->array = malloc(sizeof(hash_node_t *) * size);
+	hash_t->size = size;
+	hash_t->array = malloc(sizeof(hash_node_t *) * size);
 
-	if (!hsh_tbl->array)
+	if (!hash_t->array)
 	{
-		free(hsh_tbl->array);
+		free(hash_t->array);
 		return (NULL);
 	}
-	return (hsh_tbl);
+	return (hash_t);
 }
